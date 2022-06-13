@@ -38,21 +38,20 @@ class ValorTotalFragment : Fragment() {
             exibirLista()
         }
     }
-    private fun getLista(){
-        listaItens = arguments?.getParcelableArrayList<Produto>(KEY) as ArrayList<Produto>
-        calculo(listaItens)
-    }
-    private fun calculo(lista:ArrayList<Produto>) {
+   private fun getLista(){
+       listaItens = arguments?.getParcelableArrayList<Produto>(KEY) as ArrayList<Produto>
+       calculo(listaItens)
+   }
+    private fun calculo(listaProdutos:ArrayList<Produto>?) {
         var valor = 0.0
-        lista.forEach { item ->
-            valor+=item.getQuantidade() * item.getValor()
+       listaProdutos?.forEach { item ->
+            valor += item.getQuantidade() * item.getValor()
         }
         val resultado = "O valor total de todos os produtos é de R$ $valor"
         binding.tvValorTotal.text = resultado
     }
     private fun getNovoProduto(){
-        val bundle = bundleOf(KEY to listaItens)
-        NavHostFragment.findNavController(this).navigate(R.id.action_valorTotalFragment_to_cadastroFragment,bundle)
+        NavHostFragment.findNavController(this).navigate(R.id.action_valorTotalFragment_to_cadastroFragment)
     }
     private fun exibirLista(){
         val bundle = bundleOf(KEY to listaItens)

@@ -6,17 +6,15 @@ import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import android.widget.Toast
-import androidx.activity.addCallback
 import androidx.core.os.bundleOf
 import androidx.navigation.fragment.NavHostFragment
-import androidx.navigation.fragment.findNavController
 import br.com.zup.simcitysaojoao.*
 import br.com.zup.simcitysaojoao.databinding.FragmentCadastroBinding
 import br.com.zup.simcitysaojoao.model.Produto
 
 class CadastroFragment : Fragment() {
     private lateinit var binding: FragmentCadastroBinding
-    private var listaItens = arrayListOf<Produto>()
+    private val listaItens = arrayListOf<Produto>()
 
     private lateinit var nome: String
     private lateinit var qtd: String
@@ -36,10 +34,9 @@ class CadastroFragment : Fragment() {
 
         binding.botaoNovoCadastro.setOnClickListener {
             addItens()
-            limparCampos()
         }
         binding.botaoVerLista.setOnClickListener {
-            exibirItens()
+            exibirItens(listaItens)
         }
         binding.botaoTotal.setOnClickListener {
             exibirTotal()
@@ -49,12 +46,12 @@ class CadastroFragment : Fragment() {
     private fun addItens(){
         val produto = checarItens()
         if(produto != null){
-            listaItens.add(produto)
+            this.listaItens.add(produto)
             Toast.makeText(context, PROD_CAD, Toast.LENGTH_SHORT).show()
         }
     }
-    private fun exibirItens(){
-        val bundle = bundleOf(KEY to listaItens)
+    private fun exibirItens(lista:ArrayList<Produto>){
+        val bundle = bundleOf(KEY to lista)
         NavHostFragment.findNavController(this).navigate(R.id.action_cadastroFragment_to_produtosFragment,bundle)
     }
     private fun exibirTotal(){
@@ -67,6 +64,7 @@ class CadastroFragment : Fragment() {
         this.valor = binding.etValor.text.toString()
         this.receita = binding.etReceita.text.toString()
         if(nome.isNotEmpty() && qtd.isNotEmpty() && valor.isNotEmpty() && receita.isNotEmpty()){
+            limparCampos()
             return Produto(nome,qtd.toInt(),valor.toDouble(),receita)
         }else{
             binding.etNome.error = ERROR
