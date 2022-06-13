@@ -12,6 +12,7 @@ import androidx.navigation.fragment.findNavController
 import br.com.zup.simcitysaojoao.KEY
 import br.com.zup.simcitysaojoao.PRODUTO
 import br.com.zup.simcitysaojoao.R
+import br.com.zup.simcitysaojoao.TOTAL
 import br.com.zup.simcitysaojoao.databinding.FragmentValorTotalBinding
 import br.com.zup.simcitysaojoao.model.Produto
 
@@ -46,9 +47,14 @@ class ValorTotalFragment : Fragment() {
         var valor = 0.0
        listaProdutos?.forEach { item ->
             valor += item.getQuantidade() * item.getValor()
-        }
-        val resultado = "O valor total de todos os produtos é de R$ $valor"
-        binding.tvValorTotal.text = resultado
+           if(valor > 0.0) {
+               val total = "$TOTAL + $valor"
+               binding.tvValorTotal.text = total
+           }else{
+               val semValor = "${R.string.valor_total}"
+               binding.tvValorTotal.text = semValor
+           }
+       }
     }
     private fun getNovoProduto(){
         NavHostFragment.findNavController(this).navigate(R.id.action_valorTotalFragment_to_cadastroFragment)

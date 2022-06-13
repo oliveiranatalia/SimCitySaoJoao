@@ -20,5 +20,6 @@
     <string name="valor_total">valor total</string>
     <string name="text_total">Ainda não há valor a ser calculado</string>
     <string name="produtos_cadastrados">Produtos cadastrados</string>
+    <string name="empty">Ainda não há produtos cadastrados</string>
     <string name="list_produto">1 - produto</string>
 </resources>

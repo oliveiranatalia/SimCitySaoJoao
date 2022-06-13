@@ -52,7 +52,7 @@ class CadastroFragment : Fragment() {
     }
     private fun exibirItens(lista:ArrayList<Produto>){
         val bundle = bundleOf(KEY to lista)
-        NavHostFragment.findNavController(this).navigate(R.id.action_cadastroFragment_to_produtosFragment,bundle)
+        NavHostFragment.findNavController(this).navigate(R.id.action_cadastroFragment_to_produtosFragment, bundle)
     }
     private fun exibirTotal(){
         val bundle = bundleOf(KEY to listaItens)
