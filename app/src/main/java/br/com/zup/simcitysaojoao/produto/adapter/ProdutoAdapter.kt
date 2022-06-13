@@ -6,15 +6,9 @@ import androidx.recyclerview.widget.RecyclerView
 import br.com.zup.simcitysaojoao.databinding.ProdutoItemBinding
 import br.com.zup.simcitysaojoao.model.Produto
 
-class ProdutoAdapter(private var listaItens: ArrayList<Produto>,private var clickDetalhe: (produto:Produto) -> Unit
+class ProdutoAdapter(private var listaItens: MutableList<Produto>,
+                     private val clickDetalhe: (produto:Produto) -> Unit
 ):RecyclerView.Adapter<ProdutoAdapter.ViewHolder>() {
-
-    class ViewHolder(val binding: ProdutoItemBinding) :RecyclerView.ViewHolder(binding.root){
-        fun exibirView(produto: Produto){
-            val item = "${produto.getQuantidade()} - ${produto.getNome()}"
-            binding.tvItem.text = item
-        }
-    }
 
     override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): ViewHolder {
         val binding = ProdutoItemBinding.inflate(LayoutInflater.from(parent.context),parent, false)
@@ -39,5 +33,10 @@ class ProdutoAdapter(private var listaItens: ArrayList<Produto>,private var clic
         }
         notifyDataSetChanged()
     }
-
+    class ViewHolder(val binding: ProdutoItemBinding) :RecyclerView.ViewHolder(binding.root){
+        fun exibirView(produto: Produto){
+            val item = "${produto.getQuantidade()} - ${produto.getNome()}"
+            binding.tvItem.text = item
+        }
+    }
 }

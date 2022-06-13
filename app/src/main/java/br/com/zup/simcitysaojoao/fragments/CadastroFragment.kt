@@ -1,25 +1,27 @@
 package br.com.zup.simcitysaojoao.fragments
 
 import android.os.Bundle
-import android.util.Log
 import androidx.fragment.app.Fragment
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import android.widget.Toast
+import androidx.activity.addCallback
 import androidx.core.os.bundleOf
 import androidx.navigation.fragment.NavHostFragment
+import androidx.navigation.fragment.findNavController
 import br.com.zup.simcitysaojoao.*
 import br.com.zup.simcitysaojoao.databinding.FragmentCadastroBinding
 import br.com.zup.simcitysaojoao.model.Produto
-import br.com.zup.simcitysaojoao.produto.adapter.ProdutoAdapter
 
 class CadastroFragment : Fragment() {
     private lateinit var binding: FragmentCadastroBinding
-    private val maria = Produto("a",3,4.0,"a")
-    private val adapter:ProdutoAdapter by lazy {ProdutoAdapter(arrayListOf()) { this.maria } }
-    private val listaItens = ArrayList<Produto>()
+    private var listaItens = arrayListOf<Produto>()
 
+    private lateinit var nome: String
+    private lateinit var qtd: String
+    private lateinit var valor: String
+    private lateinit var receita: String
 
     override fun onCreateView(
         inflater: LayoutInflater, container: ViewGroup?,
@@ -32,26 +34,23 @@ class CadastroFragment : Fragment() {
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
 
-        binding.botaoNovoCadastro.setOnClickListener{
+        binding.botaoNovoCadastro.setOnClickListener {
             addItens()
+            limparCampos()
         }
-        binding.botaoVerLista.setOnClickListener{
+        binding.botaoVerLista.setOnClickListener {
             exibirItens()
         }
-        binding.botaoTotal.setOnClickListener{
+        binding.botaoTotal.setOnClickListener {
             exibirTotal()
         }
     }
+
     private fun addItens(){
         val produto = checarItens()
         if(produto != null){
             listaItens.add(produto)
-            Log.d("a", "em cima do adapter")
-            adapter.atualizarLista(listaItens)
-            Log.d("a", "embaixo do adapter")
             Toast.makeText(context, PROD_CAD, Toast.LENGTH_SHORT).show()
-        } else{
-            msgErro()
         }
     }
     private fun exibirItens(){
@@ -63,27 +62,24 @@ class CadastroFragment : Fragment() {
         NavHostFragment.findNavController(this).navigate(R.id.action_cadastroFragment_to_valorTotalFragment,bundle)
     }
     private fun checarItens():Produto?{
-        val nome = binding.etNome.text.toString()
-        val qtd = binding.etQtd.text.toString()
-        val valor = binding.etValor.text.toString()
-        val receita = binding.etReceita.text.toString()
+        this.nome = binding.etNome.text.toString()
+        this.qtd = binding.etQtd.text.toString()
+        this.valor = binding.etValor.text.toString()
+        this.receita = binding.etReceita.text.toString()
         if(nome.isNotEmpty() && qtd.isNotEmpty() && valor.isNotEmpty() && receita.isNotEmpty()){
-            limparCampos()
             return Produto(nome,qtd.toInt(),valor.toDouble(),receita)
+        }else{
+            binding.etNome.error = ERROR
+            binding.etQtd.error = ERROR
+            binding.etValor.error = ERROR
+            binding.etReceita.error = ERROR
+            return null
         }
-        return null
     }
-
     private fun limparCampos(){
         binding.etNome.text.clear()
         binding.etQtd.text.clear()
         binding.etValor.text.clear()
         binding.etReceita.text.clear()
-    }
-    private fun msgErro(){
-        binding.etNome.error = ERROR
-        binding.etQtd.error = ERROR
-        binding.etValor.error = ERROR
-        binding.etReceita.error = ERROR
     }
 }

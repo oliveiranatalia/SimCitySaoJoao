@@ -5,15 +5,15 @@
       <map>
         <entry key="..\:/Users/natalia.oliveira/Desktop/SimCitySaoJoao/app/src/main/res/layout/activity_detalhe.xml" value="0.1796875" />
         <entry key="..\:/Users/natalia.oliveira/Desktop/SimCitySaoJoao/app/src/main/res/layout/activity_main.xml" value="0.15757575757575756" />
-        <entry key="..\:/Users/natalia.oliveira/Desktop/SimCitySaoJoao/app/src/main/res/layout/activity_produto.xml" value="0.1796875" />
+        <entry key="..\:/Users/natalia.oliveira/Desktop/SimCitySaoJoao/app/src/main/res/layout/activity_produto.xml" value="0.1" />
         <entry key="..\:/Users/natalia.oliveira/Desktop/SimCitySaoJoao/app/src/main/res/layout/activity_splash.xml" value="0.1796875" />
         <entry key="..\:/Users/natalia.oliveira/Desktop/SimCitySaoJoao/app/src/main/res/layout/activity_valor_total.xml" value="0.1796875" />
         <entry key="..\:/Users/natalia.oliveira/Desktop/SimCitySaoJoao/app/src/main/res/layout/fragment_cadastro.xml" value="0.1796875" />
         <entry key="..\:/Users/natalia.oliveira/Desktop/SimCitySaoJoao/app/src/main/res/layout/fragment_detalhe.xml" value="0.22" />
         <entry key="..\:/Users/natalia.oliveira/Desktop/SimCitySaoJoao/app/src/main/res/layout/fragment_detalhes.xml" value="0.1796875" />
-        <entry key="..\:/Users/natalia.oliveira/Desktop/SimCitySaoJoao/app/src/main/res/layout/fragment_produtos.xml" value="0.1796875" />
+        <entry key="..\:/Users/natalia.oliveira/Desktop/SimCitySaoJoao/app/src/main/res/layout/fragment_produtos.xml" value="0.22" />
         <entry key="..\:/Users/natalia.oliveira/Desktop/SimCitySaoJoao/app/src/main/res/layout/fragment_valor_total.xml" value="0.1" />
-        <entry key="..\:/Users/natalia.oliveira/Desktop/SimCitySaoJoao/app/src/main/res/layout/produto_item.xml" value="0.17864583333333334" />
+        <entry key="..\:/Users/natalia.oliveira/Desktop/SimCitySaoJoao/app/src/main/res/layout/produto_item.xml" value="0.22" />
       </map>
     </option>
   </component>

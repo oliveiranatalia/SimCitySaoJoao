@@ -6,6 +6,8 @@ import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import android.widget.Toast
+import androidx.activity.addCallback
+import androidx.navigation.fragment.findNavController
 import br.com.zup.simcitysaojoao.*
 import br.com.zup.simcitysaojoao.databinding.FragmentDetalheBinding
 import br.com.zup.simcitysaojoao.model.Produto
@@ -24,7 +26,6 @@ class DetalheFragment : Fragment() {
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
         getItem()
-
         binding.ivIconeFav.setOnClickListener {
             favoritarItem()
         }
