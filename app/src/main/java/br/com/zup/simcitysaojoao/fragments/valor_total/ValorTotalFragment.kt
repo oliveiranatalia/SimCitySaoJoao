@@ -45,7 +45,7 @@ class ValorTotalFragment : Fragment() {
        listaProdutos?.forEach { item ->
             valor += item.getQuantidade() * item.getValor()
            if(valor > 0.0) {
-               val total = "$TOTAL + $valor"
+               val total = "$TOTAL $valor"
                binding.tvValorTotal.text = total
            }else{
                val semValor = "${R.string.valor_total}"

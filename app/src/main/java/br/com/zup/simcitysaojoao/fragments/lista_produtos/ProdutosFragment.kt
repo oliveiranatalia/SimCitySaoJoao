@@ -33,12 +33,12 @@ class ProdutosFragment : Fragment() {
     private fun getLista() {
         val listaItens = arguments?.getParcelableArrayList<Produto>(KEY)
         if (listaItens != null) {
-           //if (listaItens.isEmpty()) {
-           //    binding.tvTituloItens.text = VAZIO
-           //} else {
+           if (listaItens.size == 0) {
+               binding.tvTituloItens.text = VAZIO
+           } else {
                 adapter.atualizarLista(listaItens)
                 getRecyclerView()
-            //}
+            }
         }
     }
     private fun getRecyclerView(){
