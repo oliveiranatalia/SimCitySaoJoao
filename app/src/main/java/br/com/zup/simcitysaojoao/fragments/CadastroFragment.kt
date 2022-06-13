@@ -1,6 +1,7 @@
 package br.com.zup.simcitysaojoao.fragments
 
 import android.os.Bundle
+import android.util.Log
 import androidx.fragment.app.Fragment
 import android.view.LayoutInflater
 import android.view.View
@@ -11,11 +12,14 @@ import androidx.navigation.fragment.NavHostFragment
 import br.com.zup.simcitysaojoao.*
 import br.com.zup.simcitysaojoao.databinding.FragmentCadastroBinding
 import br.com.zup.simcitysaojoao.model.Produto
-
+import br.com.zup.simcitysaojoao.produto.adapter.ProdutoAdapter
 
 class CadastroFragment : Fragment() {
     private lateinit var binding: FragmentCadastroBinding
-    private val listaItens = arrayListOf<Produto>()
+    private val maria = Produto("a",3,4.0,"a")
+    private val adapter:ProdutoAdapter by lazy {ProdutoAdapter(arrayListOf()) { this.maria } }
+    private val listaItens = ArrayList<Produto>()
+
 
     override fun onCreateView(
         inflater: LayoutInflater, container: ViewGroup?,
@@ -42,8 +46,10 @@ class CadastroFragment : Fragment() {
         val produto = checarItens()
         if(produto != null){
             listaItens.add(produto)
+            Log.d("a", "em cima do adapter")
+            adapter.atualizarLista(listaItens)
+            Log.d("a", "embaixo do adapter")
             Toast.makeText(context, PROD_CAD, Toast.LENGTH_SHORT).show()
-            limparCampos()
         } else{
             msgErro()
         }
@@ -62,10 +68,12 @@ class CadastroFragment : Fragment() {
         val valor = binding.etValor.text.toString()
         val receita = binding.etReceita.text.toString()
         if(nome.isNotEmpty() && qtd.isNotEmpty() && valor.isNotEmpty() && receita.isNotEmpty()){
+            limparCampos()
             return Produto(nome,qtd.toInt(),valor.toDouble(),receita)
         }
         return null
     }
+
     private fun limparCampos(){
         binding.etNome.text.clear()
         binding.etQtd.text.clear()

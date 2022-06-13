@@ -6,8 +6,7 @@ import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import android.widget.Toast
-import br.com.zup.simcitysaojoao.FAV
-import br.com.zup.simcitysaojoao.PRODUTO
+import br.com.zup.simcitysaojoao.*
 import br.com.zup.simcitysaojoao.databinding.FragmentDetalheBinding
 import br.com.zup.simcitysaojoao.model.Produto
 
@@ -33,9 +32,9 @@ class DetalheFragment : Fragment() {
     private fun getItem(){
         val produto = arguments?.getParcelable<Produto>(PRODUTO)
         if(produto != null){
-            val nome = "Quantidade: ${produto.getQuantidade()}"
-            val valor = "Valor unitário: R$ ${produto.getValor()}"
-            val receita = "Receita: ${produto.getReceita()}"
+            val nome = "${QTD} ${produto.getQuantidade()}"
+            val valor = "${VAL} ${produto.getValor()}"
+            val receita = "${REC} ${produto.getReceita()}"
             binding.tvNomeProduto.text = produto.getNome()
             binding.tvQtdProduto.text = nome
             binding.tvValorProduto.text = valor

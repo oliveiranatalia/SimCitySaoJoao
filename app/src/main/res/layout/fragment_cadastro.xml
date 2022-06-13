@@ -27,7 +27,7 @@
         android:layout_margin="16dp"
         android:layout_marginTop="10dp"
         android:hint="@string/hint_nome"
-        android:inputType="textCapWords"
+        android:inputType="text"
         android:textSize="12sp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"

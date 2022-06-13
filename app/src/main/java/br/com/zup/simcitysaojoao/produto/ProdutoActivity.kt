@@ -17,7 +17,6 @@ class ProdutoActivity : AppCompatActivity() {
 
         getAppBar()
         supportFragmentManager.findFragmentById(binding.navHostFragment.id) as NavHostFragment
-
     }
     private fun getAppBar(){
         supportActionBar?.title = PRODUTOS

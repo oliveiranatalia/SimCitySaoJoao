@@ -13,6 +13,7 @@ class SplashActivity : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_splash)
+
         timer.schedule(object:TimerTask(){
             override fun run() {
                 jump()
