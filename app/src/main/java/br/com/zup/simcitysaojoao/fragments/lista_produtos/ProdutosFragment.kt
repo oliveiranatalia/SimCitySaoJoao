@@ -1,4 +1,4 @@
-package br.com.zup.simcitysaojoao.fragments
+package br.com.zup.simcitysaojoao.fragments.lista_produtos
 
 import android.os.Bundle
 import androidx.fragment.app.Fragment
@@ -30,11 +30,15 @@ class ProdutosFragment : Fragment() {
         super.onViewCreated(view, savedInstanceState)
         getLista()
     }
-    private fun getLista(){
+    private fun getLista() {
         val listaItens = arguments?.getParcelableArrayList<Produto>(KEY)
-        if(listaItens != null){
-            adapter.atualizarLista(listaItens)
-            getRecyclerView()
+        if (listaItens != null) {
+           //if (listaItens.isEmpty()) {
+           //    binding.tvTituloItens.text = VAZIO
+           //} else {
+                adapter.atualizarLista(listaItens)
+                getRecyclerView()
+            //}
         }
     }
     private fun getRecyclerView(){

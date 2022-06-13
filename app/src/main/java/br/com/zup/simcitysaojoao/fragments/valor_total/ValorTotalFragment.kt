@@ -1,4 +1,4 @@
-package br.com.zup.simcitysaojoao.fragments
+package br.com.zup.simcitysaojoao.fragments.valor_total
 
 import android.os.Bundle
 import androidx.fragment.app.Fragment

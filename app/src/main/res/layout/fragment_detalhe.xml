@@ -5,7 +5,7 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     xmlns:app="http://schemas.android.com/apk/res-auto"
-    tools:context=".fragments.DetalheFragment">
+    tools:context=".fragments.detalhe_produto.DetalheFragment">
 
     <ImageView
         android:id="@+id/ivCarrinho"
@@ -54,6 +54,7 @@
         android:layout_marginHorizontal="30dp"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintBottom_toTopOf="@id/tvReceita"
         app:layout_constraintTop_toBottomOf="@+id/tvQtdProduto"/>
 
     <TextView
@@ -74,12 +75,12 @@
         android:id="@+id/ivIconeFav"
         android:layout_width="40dp"
         android:layout_height="40dp"
-        android:layout_marginBottom="40dp"
-        android:layout_marginStart="300dp"
+        android:layout_margin="20dp"
         android:src="@drawable/ic_favoritar"
+        android:contentDescription="@string/desc_icon"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintStart_toEndtOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/tvReceita" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>

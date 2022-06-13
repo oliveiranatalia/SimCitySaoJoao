@@ -1,6 +1,6 @@
 <resources>
     <string name="app_name">SimCity São João</string>
-    <string name="desc_home">Festas juninas são incríveis! E em SimCity não é diferente! Aqui nesse app você consegue organizar a sua lista de comrpas para a sua festa junina de maneita fácil e simples, basta cadastrar os produtos da sua receita e se divertir!</string>
+    <string name="desc_home">Festas juninas são incríveis! E em SimCity não é diferente! Aqui nesse app você consegue organizar a sua lista de compras para a sua festa junina de maneita fácil e simples, basta cadastrar os produtos da sua receita e se divertir!</string>
     <string name="title_activity_splash">SplashActivity</string>
     <string name="botao_main">ir para produtos</string>
     <string name="desc_baloes">Bandeirinhas coloridas de festa junina presas em um cordão com laço nas pontas</string>
@@ -22,4 +22,5 @@
     <string name="produtos_cadastrados">Produtos cadastrados</string>
     <string name="empty">Ainda não há produtos cadastrados</string>
     <string name="list_produto">1 - produto</string>
+    <string name="desc_icon">Vetor de um coração vermelho</string>
 </resources>

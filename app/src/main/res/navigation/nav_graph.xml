@@ -6,7 +6,7 @@
     app:startDestination="@id/cadastroFragment">
     <fragment
         android:id="@+id/cadastroFragment"
-        android:name="br.com.zup.simcitysaojoao.fragments.CadastroFragment"
+        android:name="br.com.zup.simcitysaojoao.fragments.cadastro.CadastroFragment"
         android:label="Produtos"
         tools:layout="@layout/fragment_cadastro" >
         <action
@@ -18,7 +18,7 @@
     </fragment>
     <fragment
         android:id="@+id/produtosFragment"
-        android:name="br.com.zup.simcitysaojoao.fragments.ProdutosFragment"
+        android:name="br.com.zup.simcitysaojoao.fragments.lista_produtos.ProdutosFragment"
         android:label="Produtos"
         tools:layout="@layout/fragment_produtos" >
         <action
@@ -30,7 +30,7 @@
     </fragment>
     <fragment
         android:id="@+id/valorTotalFragment"
-        android:name="br.com.zup.simcitysaojoao.fragments.ValorTotalFragment"
+        android:name="br.com.zup.simcitysaojoao.fragments.valor_total.ValorTotalFragment"
         android:label="Valor total"
         tools:layout="@layout/fragment_valor_total" >
         <action
@@ -42,7 +42,7 @@
     </fragment>
     <fragment
         android:id="@+id/detalheFragment"
-        android:name="br.com.zup.simcitysaojoao.fragments.DetalheFragment"
+        android:name="br.com.zup.simcitysaojoao.fragments.detalhe_produto.DetalheFragment"
         android:label="Detalhes do produto"
         tools:layout="@layout/fragment_detalhe" >
         <action
