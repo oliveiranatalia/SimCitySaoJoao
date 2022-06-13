@@ -25,12 +25,8 @@ class ProdutoAdapter(private var listaItens: MutableList<Produto>,
 
     override fun getItemCount() = listaItens.size
 
-    fun atualizarLista(novaLista:ArrayList<Produto>){
-        if(listaItens.size == 0){
-            listaItens = novaLista
-        }else{
-            listaItens.addAll(novaLista)
-        }
+    fun atualizarLista(novaLista: ArrayList<Produto>) {
+        listaItens = novaLista
         notifyDataSetChanged()
     }
     class ViewHolder(val binding: ProdutoItemBinding) :RecyclerView.ViewHolder(binding.root){
