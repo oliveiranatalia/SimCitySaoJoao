@@ -30,14 +30,15 @@ class ValorTotalFragment : Fragment() {
 
         getLista()
         binding.botaoNovoProduto.setOnClickListener {
-            getNovoProduto()
+            getNovoProduto(this.listaItens)
         }
         binding.botaoVerProdutos.setOnClickListener {
-            exibirLista()
+            exibirLista(this.listaItens)
         }
     }
    private fun getLista(){
-       listaItens = arguments?.getParcelableArrayList<Produto>(KEY) as ArrayList<Produto>
+       val lista = arguments?.getParcelableArrayList<Produto>(KEY)
+       lista?.let { listaItens = it }
        calculo(listaItens)
    }
     private fun calculo(listaProdutos:ArrayList<Produto>?) {
@@ -53,10 +54,11 @@ class ValorTotalFragment : Fragment() {
            }
        }
     }
-    private fun getNovoProduto(){
-        NavHostFragment.findNavController(this).navigate(R.id.action_valorTotalFragment_to_cadastroFragment)
+    private fun getNovoProduto(listaItens:ArrayList<Produto>){
+        val bundle = bundleOf(KEY to listaItens)
+        NavHostFragment.findNavController(this).navigate(R.id.action_valorTotalFragment_to_cadastroFragment,bundle)
     }
-    private fun exibirLista(){
+    private fun exibirLista(listaItens:ArrayList<Produto>){
         val bundle = bundleOf(KEY to listaItens)
         NavHostFragment.findNavController(this).navigate(R.id.action_valorTotalFragment_to_produtosFragment,bundle)
     }

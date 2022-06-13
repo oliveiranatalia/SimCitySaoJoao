@@ -14,7 +14,7 @@ import br.com.zup.simcitysaojoao.model.Produto
 
 class CadastroFragment : Fragment() {
     private lateinit var binding: FragmentCadastroBinding
-    private val listaItens = arrayListOf<Produto>()
+    private var listaItens = arrayListOf<Produto>()
 
     private lateinit var nome: String
     private lateinit var qtd: String
@@ -39,10 +39,14 @@ class CadastroFragment : Fragment() {
             exibirItens(listaItens)
         }
         binding.botaoTotal.setOnClickListener {
-            exibirTotal()
+            exibirTotal(listaItens)
         }
+        getLista()
     }
-
+    private fun getLista(){
+        val lista = arguments?.getParcelableArrayList<Produto>(KEY)
+        lista?.let { listaItens = it }
+    }
     private fun addItens(){
         val produto = checarItens()
         if(produto != null){
@@ -50,11 +54,11 @@ class CadastroFragment : Fragment() {
             Toast.makeText(context, PROD_CAD, Toast.LENGTH_SHORT).show()
         }
     }
-    private fun exibirItens(lista:ArrayList<Produto>){
-        val bundle = bundleOf(KEY to lista)
+    private fun exibirItens(listaItens:ArrayList<Produto>){
+        val bundle = bundleOf(KEY to listaItens)
         NavHostFragment.findNavController(this).navigate(R.id.action_cadastroFragment_to_produtosFragment, bundle)
     }
-    private fun exibirTotal(){
+    private fun exibirTotal(listaItens:ArrayList<Produto>){
         val bundle = bundleOf(KEY to listaItens)
         NavHostFragment.findNavController(this).navigate(R.id.action_cadastroFragment_to_valorTotalFragment,bundle)
     }

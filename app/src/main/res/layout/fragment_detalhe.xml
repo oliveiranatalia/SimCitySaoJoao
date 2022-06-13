@@ -60,27 +60,23 @@
         android:id="@+id/tvReceita"
         android:layout_width="match_parent"
         android:layout_height="0dp"
-        android:layout_marginHorizontal="30dp"
-        android:layout_marginTop="10dp"
         android:text="@string/receita"
         android:textSize="12sp"
         android:textStyle="bold"
+        android:layout_marginTop="10dp"
+        android:layout_marginHorizontal="30dp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/tvValorProduto"
-        app:layout_constraintBottom_toTopOf="@id/ivIconeFav"/>
+        app:layout_constraintTop_toBottomOf="@+id/tvValorProduto"/>
 
     <ImageView
         android:id="@+id/ivIconeFav"
         android:layout_width="40dp"
         android:layout_height="40dp"
-        android:layout_marginBottom="40dp"
-        android:layout_marginStart="300dp"
-        android:src="@drawable/ic_favoritar"
         android:contentDescription="@string/desc_icon"
+        android:src="@drawable/ic_favoritar"
+        android:layout_margin="30dp"
         app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/tvReceita" />
+        app:layout_constraintEnd_toEndOf="parent" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>

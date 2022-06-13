@@ -31,9 +31,9 @@ class DetalheFragment : Fragment() {
     private fun getItem(){
         val produto = arguments?.getParcelable<Produto>(PRODUTO)
         if(produto != null){
-            val qtd = "${QTD} ${produto.getQuantidade()}"
-            val valor = "${VAL} ${produto.getValor()}"
-            val receita = "${REC} ${produto.getReceita()}"
+            val qtd = "$QTD ${produto.getQuantidade()}"
+            val valor = "$VAL ${produto.getValor()}"
+            val receita = "$REC ${produto.getReceita()}"
             binding.tvNomeProduto.text = produto.getNome()
             binding.tvQtdProduto.text = qtd
             binding.tvValorProduto.text = valor
