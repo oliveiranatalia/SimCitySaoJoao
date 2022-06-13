@@ -5,8 +5,9 @@ import androidx.fragment.app.Fragment
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
-import br.com.zup.simcitysaojoao.KEY
-import br.com.zup.simcitysaojoao.R
+import android.widget.Toast
+import br.com.zup.simcitysaojoao.FAV
+import br.com.zup.simcitysaojoao.PRODUTO
 import br.com.zup.simcitysaojoao.databinding.FragmentDetalheBinding
 import br.com.zup.simcitysaojoao.model.Produto
 
@@ -23,15 +24,25 @@ class DetalheFragment : Fragment() {
 
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
-        getLista()
-    }
-    private fun getLista(){
-        val produto = arguments?.getParcelable<Produto>(KEY)
-        if(produto != null){
-            binding.tvNomeProduto.text = produto.getNome()
-            binding.tvQtdProduto.text = produto.getQuantidade().toString()
-            binding.tvValorProduto.text = produto.getValor().toString()
-            binding.tvReceita.text = produto.getReceita()
+        getItem()
+
+        binding.ivIconeFav.setOnClickListener {
+            favoritarItem()
         }
+    }
+    private fun getItem(){
+        val produto = arguments?.getParcelable<Produto>(PRODUTO)
+        if(produto != null){
+            val nome = "Quantidade: ${produto.getQuantidade()}"
+            val valor = "Valor unitário: R$ ${produto.getValor()}"
+            val receita = "Receita: ${produto.getReceita()}"
+            binding.tvNomeProduto.text = produto.getNome()
+            binding.tvQtdProduto.text = nome
+            binding.tvValorProduto.text = valor
+            binding.tvReceita.text = receita
+        }
+    }
+    private fun favoritarItem(){
+        Toast.makeText(context, FAV, Toast.LENGTH_SHORT).show()
     }
 }

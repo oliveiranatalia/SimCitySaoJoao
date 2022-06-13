@@ -41,8 +41,9 @@ class CadastroFragment : Fragment() {
     private fun addItens(){
         val produto = checarItens()
         if(produto != null){
-            this.listaItens.add(produto)
-            Toast.makeText(context, PROD_CAD, Toast.LENGTH_LONG).show()
+            listaItens.add(produto)
+            Toast.makeText(context, PROD_CAD, Toast.LENGTH_SHORT).show()
+            limparCampos()
         } else{
             msgErro()
         }
@@ -61,7 +62,6 @@ class CadastroFragment : Fragment() {
         val valor = binding.etValor.text.toString()
         val receita = binding.etReceita.text.toString()
         if(nome.isNotEmpty() && qtd.isNotEmpty() && valor.isNotEmpty() && receita.isNotEmpty()){
-            limparCampos()
             return Produto(nome,qtd.toInt(),valor.toDouble(),receita)
         }
         return null

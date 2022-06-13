@@ -1,6 +1,5 @@
 package br.com.zup.simcitysaojoao.fragments
 
-import android.content.Intent
 import android.os.Bundle
 import androidx.fragment.app.Fragment
 import android.view.LayoutInflater
@@ -43,7 +42,7 @@ class ProdutosFragment : Fragment() {
         binding.rvListaProdutos.layoutManager = LinearLayoutManager(context)
     }
     private fun detalheProduto(produto:Produto){
-        val bundle = bundleOf(KEY to produto)
+        val bundle = bundleOf(PRODUTO to produto)
         NavHostFragment.findNavController(this).navigate(R.id.action_produtosFragment_to_detalheFragment,bundle)
     }
 }

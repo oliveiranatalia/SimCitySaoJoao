@@ -38,7 +38,7 @@ class ValorTotalFragment : Fragment() {
         val listaItens = arguments?.getParcelableArrayList<Produto>(KEY)
         listaItens?.forEach { item ->
             valor+=(item.getQuantidade() * item.getValor())
-            val resultado = "o valor total de todos os produtos é de R$ $valor"
+            val resultado = "O valor total de todos os produtos é de R$ $valor"
             binding.tvValorTotal.text = resultado
         }
     }

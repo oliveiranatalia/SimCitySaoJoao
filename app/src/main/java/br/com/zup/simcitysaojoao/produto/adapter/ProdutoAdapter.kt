@@ -16,7 +16,7 @@ class ProdutoAdapter(private var listaItens: ArrayList<Produto>,private var clic
         }
     }
 
-    override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): ProdutoAdapter.ViewHolder {
+    override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): ViewHolder {
         val binding = ProdutoItemBinding.inflate(LayoutInflater.from(parent.context),parent, false)
         return ViewHolder(binding)
     }
