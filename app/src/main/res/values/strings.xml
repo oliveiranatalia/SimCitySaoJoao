@@ -1,0 +1,23 @@
+<resources>
+    <string name="app_name">SimCity São João</string>
+    <string name="desc_home">Festas juninas são incríveis! E em SimCity não é diferente! Aqui nesse app você consegue organizar a sua lista de comrpas para a sua festa junina de maneita fácil e simples, basta cadastrar os produtos da sua receita e se divertir!</string>
+    <string name="title_activity_splash">SplashActivity</string>
+    <string name="botao_main">ir para produtos</string>
+    <string name="desc_baloes">Bandeirinhas coloridas de festa junina presas em um cordão com laço nas pontas</string>
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+    <string name="text_cadastro">Cadastro de produtos</string>
+    <string name="hint_nome">Nome do produto</string>
+    <string name="hint_qtd">Quantidade do produto</string>
+    <string name="hint_valor">Valor (unitário) do produto</string>
+    <string name="hint_receita">Receita</string>
+    <string name="novo_produto">cadastrar novo produto</string>
+    <string name="ver_produtos">ver produtos</string>
+    <string name="desc_carrinho">Imagem de um vetor de um carrinho de mercado vermelho</string>
+    <string name="nome_produto">Pipoca</string>
+    <string name="qtd">Quantidade</string>
+    <string name="valor">Valor</string>
+    <string name="receita">Receita</string>
+    <string name="valor_total">Ainda não há valor a ser calculado</string>
+    <string name="produtos_cadastrados">Produtos cadastrados</string>
+    <string name="list_produto">1 - produto</string>
+</resources>
