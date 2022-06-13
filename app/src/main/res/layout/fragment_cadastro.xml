@@ -37,9 +37,8 @@
         android:layout_margin="16dp"
         android:layout_marginTop="10dp"
         android:hint="@string/hint_nome"
-        android:importantForAutofill="no"
         android:inputType="textCapSentences"
-        android:minHeight="48dp"
+        android:importantForAutofill="no"
         android:textSize="12sp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
@@ -49,46 +48,41 @@
         android:id="@+id/etQtd"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
+        android:hint="@string/hint_qtd"
+        android:textSize="12sp"
+        android:inputType="numberDecimal"
+        android:importantForAutofill="no"
         android:layout_margin="16dp"
         android:layout_marginTop="10dp"
-        android:hint="@string/hint_qtd"
-        android:importantForAutofill="no"
-        android:inputType="numberDecimal"
-        android:minHeight="48dp"
-        android:textSize="12sp"
-        app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/etNome" />
-
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/etNome"/>
     <EditText
         android:id="@+id/etValor"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
+        android:hint="@string/hint_valor"
+        android:textSize="12sp"
+        android:inputType="numberDecimal"
+        android:importantForAutofill="no"
         android:layout_margin="16dp"
         android:layout_marginTop="10dp"
-        android:hint="@string/hint_valor"
-        android:importantForAutofill="no"
-        android:inputType="numberDecimal"
-        android:minHeight="48dp"
-        android:textSize="12sp"
-        app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@id/etQtd" />
-
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/etQtd"/>
     <EditText
         android:id="@+id/etReceita"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
+        android:hint="@string/hint_receita"
+        android:textSize="12sp"
+        android:inputType="textCapSentences"
+        android:importantForAutofill="no"
         android:layout_margin="16dp"
         android:layout_marginTop="10dp"
-        android:hint="@string/hint_receita"
-        android:importantForAutofill="no"
-        android:inputType="textCapSentences"
-        android:minHeight="48dp"
-        android:textSize="12sp"
-        app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@id/etValor" />
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/etValor"/>
 
     <Button
         android:id="@+id/botaoNovoCadastro"
@@ -112,8 +106,7 @@
         android:text="@string/ver_produtos"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@id/botaoNovoCadastro"
-        tools:ignore="TextContrastCheck" />
+        app:layout_constraintTop_toBottomOf="@id/botaoNovoCadastro" />
 
     <Button
         android:id="@+id/botaoTotal"

@@ -3,11 +3,13 @@
   <component name="DesignSurface">
     <option name="filePathToZoomLevelMap">
       <map>
+        <entry key="..\:/Users/natalia.oliveira/Desktop/SimCitySaoJoao/app/src/main/res/drawable-v24/ic_launcher_foreground.xml" value="0.137" />
+        <entry key="..\:/Users/natalia.oliveira/Desktop/SimCitySaoJoao/app/src/main/res/drawable/ic_launcher_background.xml" value="0.137" />
         <entry key="..\:/Users/natalia.oliveira/Desktop/SimCitySaoJoao/app/src/main/res/layout-v26/activity_main.xml" value="0.11503623188405797" />
         <entry key="..\:/Users/natalia.oliveira/Desktop/SimCitySaoJoao/app/src/main/res/layout/activity_detalhe.xml" value="0.1796875" />
         <entry key="..\:/Users/natalia.oliveira/Desktop/SimCitySaoJoao/app/src/main/res/layout/activity_main.xml" value="0.15757575757575756" />
-        <entry key="..\:/Users/natalia.oliveira/Desktop/SimCitySaoJoao/app/src/main/res/layout/activity_produto.xml" value="0.22" />
-        <entry key="..\:/Users/natalia.oliveira/Desktop/SimCitySaoJoao/app/src/main/res/layout/activity_splash.xml" value="0.1796875" />
+        <entry key="..\:/Users/natalia.oliveira/Desktop/SimCitySaoJoao/app/src/main/res/layout/activity_produto.xml" value="0.1" />
+        <entry key="..\:/Users/natalia.oliveira/Desktop/SimCitySaoJoao/app/src/main/res/layout/activity_splash.xml" value="0.1" />
         <entry key="..\:/Users/natalia.oliveira/Desktop/SimCitySaoJoao/app/src/main/res/layout/activity_valor_total.xml" value="0.1796875" />
         <entry key="..\:/Users/natalia.oliveira/Desktop/SimCitySaoJoao/app/src/main/res/layout/fragment_cadastro.xml" value="0.1796875" />
         <entry key="..\:/Users/natalia.oliveira/Desktop/SimCitySaoJoao/app/src/main/res/layout/fragment_detalhe.xml" value="0.22" />

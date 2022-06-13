@@ -8,13 +8,13 @@
     android:orientation="vertical"
     tools:context=".produto.ProdutoActivity">
 
-<androidx.appcompat.widget.Toolbar
-    android:id="@+id/toolbar"
-    android:layout_width="match_parent"
-    android:layout_height="wrap_content"
-    android:minHeight="?actionBarSize"
-    android:background="@color/azul_claro"
-    android:theme="?attr/actionBarTheme"/>
+    <androidx.appcompat.widget.Toolbar
+        android:id="@+id/toolbar"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:minHeight="?actionBarSize"
+        android:background="@color/azul_claro"
+        android:theme="?attr/actionBarTheme"/>
 
     <androidx.fragment.app.FragmentContainerView
         android:id="@+id/nav_host_fragment"
