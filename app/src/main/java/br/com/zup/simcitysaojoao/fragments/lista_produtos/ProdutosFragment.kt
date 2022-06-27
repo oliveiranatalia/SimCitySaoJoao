@@ -11,7 +11,7 @@ import androidx.recyclerview.widget.LinearLayoutManager
 import br.com.zup.simcitysaojoao.*
 import br.com.zup.simcitysaojoao.databinding.FragmentProdutosBinding
 import br.com.zup.simcitysaojoao.model.Produto
-import br.com.zup.simcitysaojoao.produto.adapter.ProdutoAdapter
+import br.com.zup.simcitysaojoao.fragments.lista_produtos.adapter.ProdutoAdapter
 
 
 class ProdutosFragment : Fragment() {

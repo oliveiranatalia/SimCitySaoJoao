@@ -2,11 +2,9 @@ package br.com.zup.simcitysaojoao.produto
 
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
-import android.view.MenuItem
 import androidx.navigation.fragment.NavHostFragment
 import androidx.navigation.ui.AppBarConfiguration
 import androidx.navigation.ui.setupWithNavController
-import br.com.zup.simcitysaojoao.PRODUTOS
 import br.com.zup.simcitysaojoao.databinding.ActivityProdutoBinding
 
 class ProdutoActivity : AppCompatActivity() {
@@ -19,7 +17,6 @@ class ProdutoActivity : AppCompatActivity() {
 
         appBar()
         toolbar()
-
     }
     private fun appBar(){
         supportActionBar?.hide()

@@ -1,4 +1,4 @@
-package br.com.zup.simcitysaojoao.produto.adapter
+package br.com.zup.simcitysaojoao.fragments.lista_produtos.adapter
 
 import android.view.LayoutInflater
 import android.view.ViewGroup

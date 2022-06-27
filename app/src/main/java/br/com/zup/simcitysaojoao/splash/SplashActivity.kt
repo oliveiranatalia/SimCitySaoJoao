@@ -1,6 +1,5 @@
 package br.com.zup.simcitysaojoao.splash
 
-import android.annotation.SuppressLint
 import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
@@ -8,7 +7,6 @@ import br.com.zup.simcitysaojoao.home.MainActivity
 import br.com.zup.simcitysaojoao.R
 import java.util.*
 
-@SuppressLint("CustomSplashScreen")
 class SplashActivity : AppCompatActivity() {
     private val timer = Timer()
 
